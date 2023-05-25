@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom"
 import { useAppDispatch } from "../../store/hooks"
 import { assignUsername } from "../../store/slices/usernameSlice"
 
-export function LoginForm() {
+export function LoginPage() {
   const [name, setName] = useState("")
   const dispatch = useAppDispatch()
   const navigate = useNavigate()

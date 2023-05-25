@@ -1,4 +1,3 @@
-export { Layout } from "./Layout"
-export { LoginForm } from "./LoginForm"
+export { AddTask } from "./AddTask"
+export { AllTasks } from "./AllTasks"
 export { Task } from "./Task"
-export { TasksPage } from "./TasksPage"

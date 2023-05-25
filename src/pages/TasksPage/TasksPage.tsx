@@ -1,6 +1,6 @@
+import { AddTask, AllTasks } from "../../components"
 import { useAppSelector } from "../../store/hooks"
 import { selectUsername } from "../../store/slices/usernameSlice"
-import { Task } from "../Task"
 
 export function TasksPage() {
   const username = useAppSelector(selectUsername)
@@ -8,7 +8,8 @@ export function TasksPage() {
   return (
     <>
       <h1>Hello, {username}</h1>
-      <Task />
+      <AddTask />
+      <AllTasks />
     </>
   )
 }

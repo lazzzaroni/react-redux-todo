@@ -1,22 +1,22 @@
 import { Route, Routes } from "react-router-dom"
 import "./App.css"
-import { Layout, LoginForm, TasksPage } from "./components"
 import { Counter } from "./features/counter/Counter"
 import logo from "./logo.svg"
+import { Layout, LoginPage, TasksPage } from "./pages"
 
 function App() {
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
-        <Route index element={<LoginForm />} />
+        <Route index element={<LoginPage />} />
         <Route path="tasks" element={<TasksPage />} />
-        <Route path="boilerplate" element={<StartPage />} />
+        <Route path="boilerplate" element={<BoilerplatePage />} />
       </Route>
     </Routes>
   )
 }
 
-function StartPage() {
+function BoilerplatePage() {
   return (
     <div className="App">
       <header className="App-header">
