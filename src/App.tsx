@@ -1,13 +1,17 @@
 import { Route, Routes } from "react-router-dom"
 import "./App.css"
+import { Layout, LoginForm, TasksPage } from "./components"
 import { Counter } from "./features/counter/Counter"
 import logo from "./logo.svg"
 
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<StartPage />} />
-      <Route path="/todo" element={<h1>Hello</h1>} />
+      <Route path="/" element={<Layout />}>
+        <Route index element={<LoginForm />} />
+        <Route path="tasks" element={<TasksPage />} />
+        <Route path="boilerplate" element={<StartPage />} />
+      </Route>
     </Routes>
   )
 }
