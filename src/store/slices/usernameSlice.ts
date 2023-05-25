@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit"
+import { PayloadAction, createSlice } from "@reduxjs/toolkit"
 import { RootState } from ".."
 
 export interface UsernameState {
@@ -13,13 +13,17 @@ export const usernameSlice = createSlice({
   name: "user",
   initialState,
   reducers: {
-    setName: (state, action) => {
-      state.name = action.payload.name
+    assignUsername: (state, action: PayloadAction<string>) => {
+      if (action.payload.trim() === "") {
+        // do nothing
+      } else {
+        state.name = action.payload
+      }
     },
   },
 })
 
-export const { setName } = usernameSlice.actions
+export const { assignUsername } = usernameSlice.actions
 
 export const selectUsername = (state: RootState) => state.username.name
 
