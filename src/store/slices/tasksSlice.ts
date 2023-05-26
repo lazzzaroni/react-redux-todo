@@ -43,5 +43,7 @@ export const tasksSlice = createSlice({
 export const { addTask, deleteTask, toggleComplete } = tasksSlice.actions;
 
 export const selectTasks = (state: RootState) => state.tasks;
+export const selectActiveTasks = (state: RootState) =>
+  state.tasks.filter((task) => !task.completed);
 
 export default tasksSlice.reducer;

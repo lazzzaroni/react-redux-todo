@@ -1,4 +1,4 @@
-import { AddTask, AllTasks } from "../../components";
+import { ActiveTasks, AddTask, AllTasks } from "../../components";
 import { useAppSelector } from "../../store/hooks";
 import { selectUsername } from "../../store/slices/usernameSlice";
 
@@ -8,6 +8,7 @@ export function TasksPage() {
   return (
     <>
       <h1>Hello, {username}</h1>
+      <ActiveTasks />
       <AddTask />
       <AllTasks />
     </>
