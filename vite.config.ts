@@ -1,10 +1,11 @@
 import react from "@vitejs/plugin-react";
 import path from "path";
+import eslint from "vite-plugin-eslint";
 import { defineConfig } from "vitest/config";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  plugins: [react(), eslint()],
   server: {
     open: true,
   },
