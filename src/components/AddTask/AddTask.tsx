@@ -8,6 +8,7 @@ export function AddTask() {
   const dispatch = useAppDispatch();
   function handleSubmit(e: React.SyntheticEvent) {
     e.preventDefault();
+    if (value.trim() === "") return;
     dispatch(addTask(value));
     setValue("");
   }

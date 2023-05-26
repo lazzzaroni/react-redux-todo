@@ -11,7 +11,7 @@ export function LoginPage() {
 
   function handleSubmit(e: React.SyntheticEvent) {
     e.preventDefault();
-    if (name !== "") {
+    if (name.trim() !== "") {
       dispatch(assignUsername(name));
     }
     navigate("/tasks");
