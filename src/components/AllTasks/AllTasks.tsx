@@ -1,3 +1,4 @@
+import { Task } from "..";
 import { useAppSelector } from "../../store/hooks";
 import { selectTasks } from "../../store/slices/tasksSlice";
 
@@ -8,10 +9,7 @@ export function AllTasks() {
     <>
       <h2>All Tasks</h2>
       {tasks.map((task) => (
-        <div key={task.id}>
-          <p>{task.title}</p>
-          <p>{task.completed}</p>
-        </div>
+        <Task key={task.id} {...task} />
       ))}
     </>
   );
