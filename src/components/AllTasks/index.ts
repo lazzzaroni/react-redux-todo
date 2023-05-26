@@ -1,1 +1,1 @@
-export { AllTasks } from "./AllTasks"
+export { AllTasks } from "./AllTasks";

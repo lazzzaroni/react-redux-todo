@@ -1,13 +1,13 @@
-import { PayloadAction, createSlice } from "@reduxjs/toolkit"
-import { RootState } from "../../store"
+import { PayloadAction, createSlice } from "@reduxjs/toolkit";
+import { RootState } from "../../store";
 
 export interface UsernameState {
-  name: string
+  name: string;
 }
 
 const initialState: UsernameState = {
   name: "Guest",
-}
+};
 
 export const usernameSlice = createSlice({
   name: "user",
@@ -17,14 +17,14 @@ export const usernameSlice = createSlice({
       if (action.payload.trim() === "") {
         // do nothing
       } else {
-        state.name = action.payload
+        state.name = action.payload;
       }
     },
   },
-})
+});
 
-export const { assignUsername } = usernameSlice.actions
+export const { assignUsername } = usernameSlice.actions;
 
-export const selectUsername = (state: RootState) => state.username.name
+export const selectUsername = (state: RootState) => state.username.name;
 
-export default usernameSlice.reducer
+export default usernameSlice.reducer;

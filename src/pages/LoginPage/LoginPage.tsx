@@ -1,19 +1,19 @@
-import { useState } from "react"
-import { useNavigate } from "react-router-dom"
-import { useAppDispatch } from "../../store/hooks"
-import { assignUsername } from "../../store/slices/usernameSlice"
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { useAppDispatch } from "../../store/hooks";
+import { assignUsername } from "../../store/slices/usernameSlice";
 
 export function LoginPage() {
-  const [name, setName] = useState("")
-  const dispatch = useAppDispatch()
-  const navigate = useNavigate()
+  const [name, setName] = useState("");
+  const dispatch = useAppDispatch();
+  const navigate = useNavigate();
 
   function handleSubmit(e: React.SyntheticEvent) {
-    e.preventDefault()
+    e.preventDefault();
     if (name !== "") {
-      dispatch(assignUsername(name))
+      dispatch(assignUsername(name));
     }
-    navigate("/tasks")
+    navigate("/tasks");
   }
 
   return (
@@ -28,5 +28,5 @@ export function LoginPage() {
       />
       <button>Submit</button>
     </form>
-  )
+  );
 }

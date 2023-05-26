@@ -1,8 +1,8 @@
-import { useAppSelector } from "../../store/hooks"
-import { selectTasks } from "../../store/slices/tasksSlice"
+import { useAppSelector } from "../../store/hooks";
+import { selectTasks } from "../../store/slices/tasksSlice";
 
 export function AllTasks() {
-  const tasks = useAppSelector(selectTasks)
+  const tasks = useAppSelector(selectTasks);
 
   return (
     <>
@@ -14,5 +14,5 @@ export function AllTasks() {
         </div>
       ))}
     </>
-  )
+  );
 }

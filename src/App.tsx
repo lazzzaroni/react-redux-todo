@@ -1,8 +1,8 @@
-import { Route, Routes } from "react-router-dom"
-import "./App.css"
-import { Counter } from "./features/counter/Counter"
-import logo from "./logo.svg"
-import { Layout, LoginPage, TasksPage } from "./pages"
+import { Route, Routes } from "react-router-dom";
+import "./App.css";
+import { Counter } from "./features/counter/Counter";
+import logo from "./logo.svg";
+import { Layout, LoginPage, TasksPage } from "./pages";
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
         <Route path="boilerplate" element={<BoilerplatePage />} />
       </Route>
     </Routes>
-  )
+  );
 }
 
 function BoilerplatePage() {
@@ -65,6 +65,6 @@ function BoilerplatePage() {
         </span>
       </header>
     </div>
-  )
+  );
 }
-export default App
+export default App;

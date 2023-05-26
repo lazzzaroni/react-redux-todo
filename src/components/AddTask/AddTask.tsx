@@ -1,14 +1,14 @@
-import { useState } from "react"
-import { useAppDispatch } from "../../store/hooks"
-import { addTask } from "../../store/slices/tasksSlice"
+import { useState } from "react";
+import { useAppDispatch } from "../../store/hooks";
+import { addTask } from "../../store/slices/tasksSlice";
 
 export function AddTask() {
-  const [value, setValue] = useState("")
-  const dispatch = useAppDispatch()
+  const [value, setValue] = useState("");
+  const dispatch = useAppDispatch();
   function handleSubmit(e: React.SyntheticEvent) {
-    e.preventDefault()
-    dispatch(addTask(value))
-    setValue("")
+    e.preventDefault();
+    dispatch(addTask(value));
+    setValue("");
   }
 
   return (
@@ -23,5 +23,5 @@ export function AddTask() {
       />
       <button>Submit</button>
     </form>
-  )
+  );
 }
