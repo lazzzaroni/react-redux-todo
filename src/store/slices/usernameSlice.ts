@@ -1,11 +1,12 @@
-import { PayloadAction, createSlice } from "@reduxjs/toolkit";
-import { RootState } from "../../store";
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-export interface UsernameState {
+import { RootState } from "@/store";
+
+export interface IUsernameState {
   name: string;
 }
 
-const initialState: UsernameState = {
+const initialState: IUsernameState = {
   name: "Guest",
 };
 

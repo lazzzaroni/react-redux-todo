@@ -1,5 +1,5 @@
-import { useAppSelector } from "../../store/hooks";
-import { selectActiveTasks } from "../../store/slices/tasksSlice";
+import { useAppSelector } from "@/store/hooks";
+import { selectActiveTasks } from "@/store/slices/tasksSlice";
 
 export function ActiveTasks() {
   const activeTasks = useAppSelector(selectActiveTasks);

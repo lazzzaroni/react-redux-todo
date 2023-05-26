@@ -1,11 +1,11 @@
-import { useAppDispatch } from "../../store/hooks";
+import { useAppDispatch } from "@/store/hooks";
 import {
-  TaskState,
   deleteTask,
+  ITaskState,
   toggleComplete,
-} from "../../store/slices/tasksSlice";
+} from "@/store/slices/tasksSlice";
 
-export function Task(task: TaskState) {
+export function Task(task: ITaskState) {
   const dispatch = useAppDispatch();
 
   const { id, title, completed } = task;
@@ -28,8 +28,8 @@ export function Task(task: TaskState) {
             checked={completed}
             onChange={handleCompleteClick}
           />
-          {title}
         </span>
+        {title}
         <button>Edit</button>
         <button onClick={handleDeleteClick}>Delete</button>
       </div>

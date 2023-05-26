@@ -1,7 +1,8 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useAppDispatch } from "../../store/hooks";
-import { assignUsername } from "../../store/slices/usernameSlice";
+
+import { useAppDispatch } from "@/store/hooks";
+import { assignUsername } from "@/store/slices/usernameSlice";
 
 export function LoginPage() {
   const [name, setName] = useState("");
@@ -18,7 +19,7 @@ export function LoginPage() {
 
   return (
     <form onSubmit={handleSubmit}>
-      <label htmlFor="username" />
+      <label htmlFor="username">Name</label>
       <input
         id="username"
         type="text"

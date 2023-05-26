@@ -1,6 +1,6 @@
-import { Task } from "..";
-import { useAppSelector } from "../../store/hooks";
-import { selectTasks } from "../../store/slices/tasksSlice";
+import { Task } from "@/components";
+import { useAppSelector } from "@/store/hooks";
+import { selectTasks } from "@/store/slices/tasksSlice";
 
 export function AllTasks() {
   const tasks = useAppSelector(selectTasks);

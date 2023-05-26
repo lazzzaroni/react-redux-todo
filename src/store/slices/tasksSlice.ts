@@ -1,7 +1,8 @@
-import { PayloadAction, createSlice, nanoid } from "@reduxjs/toolkit";
-import { RootState } from "../../store";
+import { createSlice, nanoid, PayloadAction } from "@reduxjs/toolkit";
 
-export interface TaskState {
+import { RootState } from "@/store";
+
+export interface ITaskState {
   id: string;
   title: string;
   completed: boolean;
@@ -15,7 +16,7 @@ function createTask(title: string, completed: boolean = false) {
   };
 }
 
-const initialState: TaskState[] = [
+const initialState: ITaskState[] = [
   createTask("Cook dinner"),
   createTask("Finish todo application", true),
 ];
@@ -29,7 +30,7 @@ export const tasksSlice = createSlice({
     },
     toggleComplete: (
       state,
-      action: PayloadAction<Omit<TaskState, "title">>
+      action: PayloadAction<Omit<ITaskState, "title">>
     ) => {
       const index = state.findIndex((task) => task.id === action.payload.id);
       state[index].completed = action.payload.completed;

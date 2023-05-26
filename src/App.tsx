@@ -1,5 +1,7 @@
-import { Route, Routes } from "react-router-dom";
 import "./App.css";
+
+import { Route, Routes } from "react-router-dom";
+
 import { Counter } from "./features/counter/Counter";
 import logo from "./logo.svg";
 import { Layout, LoginPage, TasksPage } from "./pages";

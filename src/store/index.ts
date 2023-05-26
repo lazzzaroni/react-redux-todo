@@ -1,13 +1,13 @@
-import { Action, ThunkAction, configureStore } from "@reduxjs/toolkit";
-import counterReducer from "../features/counter/counterSlice";
-import tasksReducer from "./slices/tasksSlice";
-import usernameReducer from "./slices/usernameSlice";
+import { Action, configureStore, ThunkAction } from "@reduxjs/toolkit";
+
+import counterReducer from "@/features/counter/counterSlice";
+import { tasksSlice, usernameSlice } from "@/store/slices";
 
 export const store = configureStore({
   reducer: {
     counter: counterReducer,
-    username: usernameReducer,
-    tasks: tasksReducer,
+    username: usernameSlice.reducer,
+    tasks: tasksSlice.reducer,
   },
 });
 

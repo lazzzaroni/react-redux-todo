@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { useAppDispatch } from "../../store/hooks";
-import { addTask } from "../../store/slices/tasksSlice";
+
+import { useAppDispatch } from "@/store/hooks";
+import { addTask } from "@/store/slices/tasksSlice";
 
 export function AddTask() {
   const [value, setValue] = useState("");
