@@ -1,16 +1,11 @@
-import { ActiveTasks, AddTask, AllTasks } from "@/components";
-import { useAppSelector } from "@/store/hooks";
-import { selectUsername } from "@/store/slices/usernameSlice";
+import { AddTask, AllTasks, Header } from "@/components";
 
 export function TasksPage() {
-  const username = useAppSelector(selectUsername);
-
   return (
-    <>
-      <h1>Hello, {username}</h1>
-      <ActiveTasks />
+    <main className="flex flex-col items-center justify-center">
+      <Header />
       <AddTask />
       <AllTasks />
-    </>
+    </main>
   );
 }
