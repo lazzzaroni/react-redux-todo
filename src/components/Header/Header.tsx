@@ -12,8 +12,12 @@ export function Header() {
 
   return (
     <>
-      <h1>Hello, {username}</h1>
-      <p>You have {tasksLength}</p>
+      <h1 className="mb-2 mt-4 text-xl font-medium text-gray-900 dark:text-gray-100">
+        Hello, {username}
+      </h1>
+      <p className="text-md pb-4 font-normal text-gray-900 dark:text-gray-100">
+        You have {tasksLength}
+      </p>
     </>
   );
 }
