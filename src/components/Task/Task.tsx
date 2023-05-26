@@ -1,13 +1,21 @@
 import { useAppDispatch } from "../../store/hooks";
-import { TaskState, toggleComplete } from "../../store/slices/tasksSlice";
+import {
+  TaskState,
+  deleteTask,
+  toggleComplete,
+} from "../../store/slices/tasksSlice";
 
 export function Task(task: TaskState) {
   const dispatch = useAppDispatch();
 
-  const { title, completed } = task;
+  const { id, title, completed } = task;
 
   function handleCompleteClick() {
-    dispatch(toggleComplete({ id: task.id, completed: !completed }));
+    dispatch(toggleComplete({ id, completed: !completed }));
+  }
+
+  function handleDeleteClick() {
+    dispatch(deleteTask(id));
   }
 
   return (
@@ -23,7 +31,7 @@ export function Task(task: TaskState) {
           {title}
         </span>
         <button>Edit</button>
-        <button>Delete</button>
+        <button onClick={handleDeleteClick}>Delete</button>
       </div>
     </li>
   );

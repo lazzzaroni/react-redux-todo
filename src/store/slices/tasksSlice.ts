@@ -34,10 +34,13 @@ export const tasksSlice = createSlice({
       const index = state.findIndex((task) => task.id === action.payload.id);
       state[index].completed = action.payload.completed;
     },
+    deleteTask: (state, action: PayloadAction<string>) => {
+      return state.filter((task) => task.id !== action.payload);
+    },
   },
 });
 
-export const { addTask, toggleComplete } = tasksSlice.actions;
+export const { addTask, deleteTask, toggleComplete } = tasksSlice.actions;
 
 export const selectTasks = (state: RootState) => state.tasks;
 
