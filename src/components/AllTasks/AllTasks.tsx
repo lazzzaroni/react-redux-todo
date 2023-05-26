@@ -8,9 +8,11 @@ export function AllTasks() {
   return (
     <>
       <h2>All Tasks</h2>
-      {tasks.map((task) => (
-        <Task key={task.id} {...task} />
-      ))}
+      <ul>
+        {tasks.map((task) => (
+          <Task key={task.id} {...task} />
+        ))}
+      </ul>
     </>
   );
 }

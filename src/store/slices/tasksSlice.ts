@@ -27,10 +27,17 @@ export const tasksSlice = createSlice({
     addTask: (state, action: PayloadAction<string>) => {
       state.push(createTask(action.payload));
     },
+    toggleComplete: (
+      state,
+      action: PayloadAction<Omit<TaskState, "title">>
+    ) => {
+      const index = state.findIndex((task) => task.id === action.payload.id);
+      state[index].completed = action.payload.completed;
+    },
   },
 });
 
-export const { addTask } = tasksSlice.actions;
+export const { addTask, toggleComplete } = tasksSlice.actions;
 
 export const selectTasks = (state: RootState) => state.tasks;
 
