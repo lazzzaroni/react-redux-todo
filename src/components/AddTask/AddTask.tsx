@@ -16,7 +16,7 @@ export function AddTask() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="flex flex-col items-center justify-center sm:flex-row"
+      className="flex w-8/12 flex-col items-center justify-center sm:flex-row"
     >
       <div>
         <label
