@@ -29,6 +29,7 @@ export function LoginPage() {
         Enter your name
       </label>
       <input
+        autoFocus
         id="username"
         type="text"
         value={name}

@@ -17,8 +17,11 @@ function createTask(title: string, completed: boolean = false) {
 }
 
 const initialState: ITaskState[] = [
+  createTask("Learn Redux basics", true),
   createTask("Cook dinner"),
+  createTask("Learn Hotel California solo", true),
   createTask("Finish todo application", true),
+  createTask("Write tests for this app"),
 ];
 
 export const tasksSlice = createSlice({

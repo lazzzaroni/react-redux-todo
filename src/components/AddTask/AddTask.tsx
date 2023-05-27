@@ -21,6 +21,7 @@ export function AddTask() {
       <div className="w-64 sm:w-full">
         <label htmlFor="username"></label>
         <input
+          autoFocus
           id="username"
           type="text"
           value={value}

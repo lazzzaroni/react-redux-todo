@@ -40,7 +40,7 @@ export function Task(task: ITaskState) {
   }
 
   return (
-    <li className="container mx-auto mb-4 h-full w-64 rounded-lg border border-gray-200 dark:border-gray-600 sm:w-96">
+    <li className="container mx-auto mb-4 h-full w-64 rounded-lg border border-gray-200 last:mb-8 dark:border-gray-600 sm:w-96">
       <form
         onSubmit={handleSubmitClick}
         className="flex h-full flex-row items-center justify-start"
