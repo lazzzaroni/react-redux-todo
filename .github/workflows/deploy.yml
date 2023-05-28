@@ -5,7 +5,7 @@ on:
   # Runs on pushes targeting the default branch
   push:
     paths:
-      - "reat-redux-todo/"
+      - "react-redux-todo/"
       - ".github/workflows/deploy.yml"
     branches:
       - main
@@ -49,7 +49,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: production-files
-          path: ./dist
+          path: ./build
 
   deploy:
     name: Deploy
@@ -62,10 +62,10 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: production-files
-          path: ./dist
+          path: ./build
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+          publish_dir: ./build
