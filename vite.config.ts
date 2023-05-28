@@ -6,7 +6,6 @@ import { defineConfig } from "vitest/config";
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react(), eslint()],
-  base: "/react-redux-todo/",
   server: {
     open: true,
   },
