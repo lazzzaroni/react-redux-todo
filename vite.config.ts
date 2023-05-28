@@ -7,13 +7,6 @@ import { defineConfig } from "vitest/config";
 export default defineConfig({
   plugins: [react(), eslint()],
   base: "/react-redux-todo/",
-  server: {
-    open: true,
-  },
-  build: {
-    outDir: "build",
-    sourcemap: true,
-  },
   test: {
     globals: true,
     environment: "jsdom",
