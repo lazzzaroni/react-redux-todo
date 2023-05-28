@@ -4,7 +4,11 @@ name: Deploy static content to Pages
 on:
   # Runs on pushes targeting the default branch
   push:
-    branches: ["main"]
+    paths:
+      - "reat-redux-todo/"
+      - ".github/workflows/deploy.yml"
+    branches:
+      - main
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -31,6 +35,9 @@ jobs:
 
       - name: Setup Node
         uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: "npm"
 
       - name: Install dependencies
         uses: bahmutov/npm-install@v1
