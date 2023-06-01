@@ -21,7 +21,7 @@ const initialState: ITaskState[] = [
   createTask("Cook dinner"),
   createTask("Learn Hotel California solo", true),
   createTask("Finish todo application", true),
-  createTask("Write tests for this app"),
+  createTask("Write a couple of tests for this app", true),
 ];
 
 export const tasksSlice = createSlice({
