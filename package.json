@@ -12,7 +12,7 @@
     "test": "vitest",
     "test:coverage": "vitest --coverage",
     "format": "prettier --write .",
-    "lint": "eslint .",
+    "lint": "eslint \"src/**/*.{ts,tsx}\" --quiet --fix",
     "type-check": "tsc"
   },
   "dependencies": {
