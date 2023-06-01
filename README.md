@@ -7,6 +7,7 @@ It actually won't save your todos, if you refresh page - you'll see initial data
 ## Stack
 
 - **Bootstrapping**: [Vite+React](https://vitejs.dev/)
+- **State Management**: [Redux Toolkit](https://redux-toolkit.js.org/)
 - **Testing**: [Vitest](https://vitest.dev/)
 - **Styling**: [Tailwind CSS](https://tailwindcss.com/)
 - **Deployment**: [Github Pages](https://lazzzaroni.github.io/react-redux-todo/)
