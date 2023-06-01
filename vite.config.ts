@@ -9,7 +9,7 @@ export default defineConfig({
   base: "/react-redux-todo/",
   test: {
     globals: true,
-    environment: "jsdom",
+    environment: "happy-dom",
     setupFiles: "src/setupTests",
     mockReset: true,
   },
