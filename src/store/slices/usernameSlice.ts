@@ -6,7 +6,7 @@ export interface IUsernameState {
   name: string;
 }
 
-const initialState: IUsernameState = {
+export const initialState: IUsernameState = {
   name: "Guest",
 };
 

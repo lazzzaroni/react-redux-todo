@@ -1,10 +1,10 @@
 import { render, screen } from "@testing-library/react";
 import { Provider } from "react-redux";
 import { StaticRouter } from "react-router-dom/server";
-import { describe, expect, test } from "vitest";
+
+import { store } from "@/store";
 
 import App from "./App";
-import { store } from "./store";
 
 describe("<App />", () => {
   test("App mounts properly", () => {
